@@ -40,12 +40,8 @@ export function getAllPosts(): PostData[] {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
     
-    // Try to extract title from H1 if not in frontmatter
-    let title = matterResult.data.title;
-    if (!title) {
-      const h1Match = matterResult.content.match(/^#\s+(.+)$/m);
-      title = h1Match ? h1Match[1] : slug;
-    }
+    // Use filename (slug) as the title as requested
+    const title = `${slug}.md`;
 
     return {
       slug,
@@ -70,12 +66,8 @@ export function getPostBySlug(slug: string): PostData | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
-    // Try to extract title from H1 if not in frontmatter
-    let title = matterResult.data.title;
-    if (!title) {
-      const h1Match = matterResult.content.match(/^#\s+(.+)$/m);
-      title = h1Match ? h1Match[1] : decodedSlug;
-    }
+    // Use filename (slug) as the title
+    const title = `${decodedSlug}.md`;
 
     return {
       slug: decodedSlug,
