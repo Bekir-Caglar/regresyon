@@ -9,7 +9,7 @@
 
 1. SPSS'i açın → **File > Open > Data**
 2. Dosya türünü **CSV** olarak seçin
-3. `regresyon_ogrenci_basari_veri_seti.csv` dosyasını seçin
+3. `regresyon_ogrenci_basari_veri_seti.xlsx` dosyasını seçin
 4. Açılan sihirbazda:
    - *Delimiter:* **Comma** (virgül)
    - *Variable names included at top of file:* **işaretli** olsun
@@ -176,4 +176,4 @@ Katsayılar incelendiğinde; çalışma saatinin (β = .539, p = .001), önceki 
 
 ---
 
-*Hazırlayan: Claude (Anthropic) | Veri: regresyon_ogrenci_basari_veri_seti.csv | N = 60*
+*Hazırlayan: Claude (Anthropic) | Veri: regresyon_ogrenci_basari_veri_seti.xlsx | N = 60*

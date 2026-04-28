@@ -17,13 +17,11 @@ yuklenme_suresi_sn = sayfa_boyutu_mb + gorsel_sayisi + javascript_dosya_sayisi
 ## Adım 1 — Veriyi SPSS'e Aktarma
 
 1. SPSS'i açın → **File > Open > Data**
-2. Dosya türünü **CSV (*.csv)** olarak seçin
-3. `regresyon_bilgisayar_bilimleri_web_performans_veri_seti.csv` dosyasını seçip **Open** tıklayın
-4. Açılan **Text Import Wizard** penceresinde:
-   - *Delimited* işaretli olsun
-   - *First line includes variable names:* **Yes**
+2. Dosya türünü **Excel (*.xlsx, *.xls)** olarak seçin
+3. `regresyon_bilgisayar_bilimleri_web_performans_veri_seti.xlsx` dosyasını seçip **Open** tıklayın
+4. Açılan **Opening Excel Data Source** penceresinde:
+   - **OK** butonuna tıklayın.
    - Delimiter: **Comma**
-5. **Finish** → veri görünümü açılır
 
 **Variable View'da şu değişkenlerin tanımlı olması gerekir:**
 

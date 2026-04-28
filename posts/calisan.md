@@ -10,13 +10,11 @@
 ## Adım 1 — Veriyi SPSS'e Aktarma
 
 1. SPSS'i açın → **File > Open > Data**
-2. Sağ alttaki dosya türü menüsünden **CSV (*.csv)** seçin
-3. `regresyon_calisan_performans_veri_seti.csv` dosyasını seçip **Open** tıklayın
-4. Açılan **Text Import Wizard** penceresinde:
-   - *Delimited* seçeneği işaretli olsun
-   - *First line includes variable names:* **Yes**
-   - Delimiter olarak **Comma** seçin
-5. **Finish** → veri görünümü açılır
+2. Sağ alttaki dosya türü menüsünden **Excel (*.xlsx, *.xls)** seçin
+3. `regresyon_calisan_performans_veri_seti.xlsx` dosyasını seçip **Open** tıklayın
+4. Açılan **Opening Excel Data Source** penceresinde:
+   - **Read variable names from first row of data** seçeneğinin işaretli olduğundan emin olun.
+   - **OK** butonuna tıklayın.
 
 **Kontrol edin:** Variable View'da şu değişkenlerin tanımlı olması gerekir:
 
@@ -277,4 +275,4 @@ Katsayılar incelendiğinde; iş yükünün (B = −5.415, p < .001), iş doyumu
 
 ---
 
-*Hazırlayan: Claude (Anthropic) | Veri: regresyon_calisan_performans_veri_seti.csv | N = 50*
+*Hazırlayan: Claude (Anthropic) | Veri: regresyon_calisan_performans_veri_seti.xlsx | N = 50*

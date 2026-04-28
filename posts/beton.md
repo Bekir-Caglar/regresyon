@@ -17,13 +17,11 @@ basinc_dayanimi_mpa = cimento_kg_m3 + su_cimento_orani + kur_suresi_gun
 ## Adım 1 — Veriyi SPSS'e Aktarma
 
 1. SPSS'i açın → **File > Open > Data**
-2. Dosya türünü **CSV (*.csv)** olarak seçin
-3. `regresyon_insaat_beton_dayanimi_veri_seti.csv` dosyasını seçip **Open** tıklayın
-4. Açılan **Text Import Wizard** penceresinde:
-   - *Delimited* işaretli olsun
-   - *First line includes variable names:* **Yes**
+2. Dosya türünü **Excel (*.xlsx, *.xls)** olarak seçin
+3. `regresyon_insaat_beton_dayanimi_veri_seti.xlsx` dosyasını seçip **Open** tıklayın
+4. Açılan **Opening Excel Data Source** penceresinde:
+   - **OK** butonuna tıklayın.
    - Delimiter: **Comma**
-5. **Finish** → veri görünümü açılır
 
 **Variable View'da kontrol edilmesi gereken değişkenler:**
 
@@ -319,4 +317,4 @@ Katsayılar incelendiğinde; su/çimento oranının (B = −60.789, p < .001) en
 
 ---
 
-*Hazırlayan: Claude (Anthropic) | Veri: regresyon_insaat_beton_dayanimi_veri_seti.csv | N = 60*
+*Hazırlayan: Claude (Anthropic) | Veri: regresyon_insaat_beton_dayanimi_veri_seti.xlsx | N = 60*

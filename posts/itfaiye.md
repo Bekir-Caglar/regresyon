@@ -16,7 +16,7 @@ Bu rehber, bir belediyenin itfaiye teşkilatı için olay yerine varış süresi
 ## 2. SPSS Adım Adım Analiz Süreci
 
 ### Adım 1: Veriyi İçe Aktarma (Import Data)
-1.  **File > Open > Data** yolunu izleyerek ilgili `.csv` dosyasını seçin.
+1.  **File > Open > Data** yolunu izleyerek ilgili `.xlsx` dosyasını seçin.
 2.  Veri setindeki değişkenlerin "Measure" tipinin **Scale** (Sayısal/Oran) olduğunu kontrol edin.
 
 ### Adım 2: Analiz Menüsünü Açma

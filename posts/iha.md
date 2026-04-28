@@ -17,7 +17,7 @@ Bu rapor, İHA fotogrametrisi çıktılarındaki yatay hata miktarını (yatay_r
 
 ### Adım 1: Veri Aktarımı (Data Import)
 1.  **File > Open > Data** yolunu izleyin.
-2.  Dosya türünü `.csv` seçerek veri setini açın.
+2.  Dosya türünü `.xlsx` seçerek veri setini açın.
 3.  **Variable View** sekmesinden değişkenlerin "Measure" kısmının **Scale** olduğundan emin olun.
 
 ### Adım 2: Regresyon Menüsüne Giriş
