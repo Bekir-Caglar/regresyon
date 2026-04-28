@@ -39,12 +39,19 @@ export function getAllPosts(): PostData[] {
     const slug = relativePath.replace(/\.md$/, '');
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
+    
+    // Try to extract title from H1 if not in frontmatter
+    let title = matterResult.data.title;
+    if (!title) {
+      const h1Match = matterResult.content.match(/^#\s+(.+)$/m);
+      title = h1Match ? h1Match[1] : slug;
+    }
 
     return {
       slug,
       content: matterResult.content,
-      title: matterResult.data.title || slug,
-      date: matterResult.data.date || '',
+      title,
+      date: matterResult.data.date || fs.statSync(fullPath).birthtime.toISOString().split('T')[0],
       description: matterResult.data.description || '',
       ...matterResult.data,
     } as PostData;
@@ -63,11 +70,18 @@ export function getPostBySlug(slug: string): PostData | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);
 
+    // Try to extract title from H1 if not in frontmatter
+    let title = matterResult.data.title;
+    if (!title) {
+      const h1Match = matterResult.content.match(/^#\s+(.+)$/m);
+      title = h1Match ? h1Match[1] : decodedSlug;
+    }
+
     return {
       slug: decodedSlug,
       content: matterResult.content,
-      title: matterResult.data.title || decodedSlug,
-      date: matterResult.data.date || '',
+      title,
+      date: matterResult.data.date || fs.statSync(fullPath).birthtime.toISOString().split('T')[0],
       description: matterResult.data.description || '',
       ...matterResult.data,
     } as PostData;
