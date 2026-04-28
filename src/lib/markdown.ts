@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
+const csvsDirectory = path.join(process.cwd(), 'public', 'csvs');
 
 export interface PostData {
   slug: string;
@@ -80,4 +81,11 @@ export function getPostBySlug(slug: string): PostData | null {
   } catch (e) {
     return null;
   }
+}
+
+export function getCsvFiles(): string[] {
+  if (!fs.existsSync(csvsDirectory)) {
+    return [];
+  }
+  return fs.readdirSync(csvsDirectory).filter(file => file.endsWith('.csv'));
 }
